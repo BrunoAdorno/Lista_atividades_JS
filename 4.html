@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercio 4</title>
+</head>
+<body>
+<h1>Soma de Números</h1>
+<p>Informe o primeiro número:</p>
+<input type="text" id="numero1">
+<p>Informe o segundo número:</p>
+<input type="text" id="numero2">
+
+<br> <br>
+
+<button onclick="calcularSoma()">Calcular Soma</button>
+<p>A soma dos dois números é: <span id="resultado"></span></p>
+
+<script>
+
+    function calcularSoma() {
+
+        var numero1Str = document.getElementById("numero1").value;
+        var numero2Str = document.getElementById("numero2").value;
+        var numero1 = parseFloat(numero1Str);
+        var numero2 = parseFloat(numero2Str);
+
+        if (!isNaN(numero1) && !isNaN(numero2)) {
+
+            var soma = numero1 + numero2;
+            document.getElementById("resultado").textContent = soma;
+
+            } else {
+
+            document.getElementById("resultado").textContent = "insira números reais.";
+
+            }
+        }
+    </script>
+</body>
+</html>
